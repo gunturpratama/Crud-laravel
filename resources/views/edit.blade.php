@@ -29,6 +29,7 @@
 
 			<div class="row">
 				<div class="input-field col s6">
+					<input placeholder="Placeholder" id="nama_barang" name="id_barang" value="{{ $barang->id_barang }}" type="hidden" class="validate">
 					<input placeholder="Placeholder" id="nama_barang" name="nama_barang" value="{{ $barang->nama_barang }}" type="text" class="validate">
 					
 				</div>

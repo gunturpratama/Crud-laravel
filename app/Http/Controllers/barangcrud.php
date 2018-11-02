@@ -105,11 +105,11 @@ class barangcrud extends Controller
     }
 
 
-    public function deldestroy(Request $datareq)
+    public function deldestroy($id)
     {
 
 
-        $barang = DB::table('barang')->where('id_barang',$datareq->id_barang)->delete();
+        $barang = DB::table('barang')->where('id_barang',$id)->delete();
         
 
         return redirect('/');
