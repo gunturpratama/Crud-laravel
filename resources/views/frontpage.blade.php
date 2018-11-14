@@ -16,6 +16,25 @@
 
 <div class="container">
 
+<div>
+
+
+
+<div class="container">
+
+<form action="{{ url('/search') }}" method="POST">
+
+	{{ csrf_field() }}
+
+<input type="text" id="search" placeholder="input search" name="search">
+
+</form>
+
+</div>
+
+
+</div>
+
 	      <table>
         <thead>
           <tr>
@@ -34,7 +53,7 @@
         <tbody>
           <tr>
             <td>{{ $no+1 }}</td>
-            <td>{{ $produk->nama_barang }}r</td>
+            <td>{{ $produk->nama_barang }}</td>
             <td>{{ $produk->kategori }}</td>
             <td>{{ $produk->desc }}</td>
             <td>{{ $produk->supplier }}</td>

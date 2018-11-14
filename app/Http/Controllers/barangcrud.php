@@ -3,14 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use DB;
 
 class barangcrud extends Controller
 {
-    //
-    //
-    //
-    //
+   
 
     public function index()
     {
@@ -95,13 +93,6 @@ class barangcrud extends Controller
             return redirect('/');
 
 
-
-
-       
-
-
-
-
     }
 
 
@@ -113,6 +104,23 @@ class barangcrud extends Controller
         
 
         return redirect('/');
+    }
+
+
+
+
+    // search form
+
+    public function searchpost(Request $datareq) 
+    {
+
+        $data['title'] = 'pencarian barang';
+
+        $ktkunci = $datareq->search;
+
+        $barang = DB::table('barang')->where('nama_barang', 'like', '%'.$ktkunci.'%')->get();
+
+        return view('search',compact('ktkunci','barang','data'));
     }
 
 

@@ -35,3 +35,8 @@ Route::get('/edit/{id}','barangcrud@editshow');
 Route::post('/editupdate','barangcrud@editupdate');
 
 Route::get('/deldestroy/{id}', 'barangcrud@deldestroy');
+
+
+// search form
+
+Route::post('/search', 'barangcrud@searchpost');
